@@ -1,5 +1,5 @@
-import { HelloWorld } from "./Command";
+import { ShowDiagnostic } from "./Command";
 
 export default [
-    new HelloWorld,
+    new ShowDiagnostic,
 ];

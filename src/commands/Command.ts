@@ -37,12 +37,12 @@ export abstract class Command implements vscode.Command {
     abstract executeCommand(): Promise<void |string>;
 }
 
-export class HelloWorld extends Command {
+export class ShowDiagnostic extends Command {
 
-    public title = "Hello World";
-    public command = "epistyle.helloWorld";
+    public title = "Show Diagnostic";
+    public command = "epistyle.showDiagnostic";
 
     public async executeCommand(): Promise<string | void> {
-        vscode.window.showInformationMessage('Hello World from epistyle!');
+        vscode.window.showInformationMessage('Show coding style');
     }
 }

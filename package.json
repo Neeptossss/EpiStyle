@@ -10,14 +10,14 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:epistyle.helloWorld"
+    "onCommand:epistyle.show"
   ],
   "main": "./out/src/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "epistyle.helloWorld",
-        "title": "Hello World"
+        "command": "epistyle.show",
+        "title": "Show"
       }
     ]
   },
