@@ -19,14 +19,14 @@ export function activate(context: vscode.ExtensionContext) {
 
 function registerCommand(context: vscode.ExtensionContext) {
 	command.forEach((command) => {
-		console.log(`Register command: ${command.title}`);
+		log(`Register command: ${command.title}`);
 		
 		try {
 			context.subscriptions.push(
 				vscode.commands.registerCommand(command.getCommand(), command.execute, command)
 			);
 		} catch {
-			console.log(`Fail to register the command: ${command.getCommand()}`);
+			log(`Fail to register the command: ${command.getCommand()}`);
 		}
 	});
 }

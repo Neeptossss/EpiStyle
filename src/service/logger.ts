@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import { context } from '../context';
 
 
+// Use to display log in the debug console 
 let outputChannel: vscode.OutputChannel | undefined = undefined;
 export function log(string: string, param?: any) {
 	const displayName = context.extension.packageJSON.displayName;

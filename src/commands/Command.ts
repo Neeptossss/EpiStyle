@@ -25,7 +25,7 @@ export abstract class Command implements vscode.Command {
 			}
 
 		} finally {
-			log("Command execution: finally");
+			log("Command execution: successufly");
 			updateStatusBar(undefined);
         }
     }
