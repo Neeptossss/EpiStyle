@@ -10,16 +10,36 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:epistyle.show"
+    "onCommand:epistyle.showDiagnostic"
   ],
   "main": "./out/src/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "epistyle.show",
-        "title": "Show"
+        "command": "epistyle.showDiagnostic",
+        "title": "Show",
+        "icon": {
+          "light": "resources/light/tek.svg",
+          "dark": "resources/dark/tek.svg"
+        }
       }
-    ]
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "epistyle.showDiagnostic",
+          "when": "editorLangId == c",
+          "group": "navigation@1"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "epistyle.showDiagnostic",
+          "when": "editorLangId == c",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
